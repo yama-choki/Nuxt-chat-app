@@ -24,7 +24,10 @@ export default {
     }
   },
   methods: {
+    // eslint-disable-next-line require-await
     async submit () {
+      this.$store.commit('chat/ADD_MESSAGE', this.form)
+      this.$router.push('/')
     }
   }
 }
