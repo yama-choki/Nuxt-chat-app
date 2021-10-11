@@ -28,6 +28,7 @@ export default {
     }
   },
   async mounted () {
+    await this.$store.dispatch('chat/getMessages')
   }
 }
 </script>

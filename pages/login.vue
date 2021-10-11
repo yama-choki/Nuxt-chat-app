@@ -15,6 +15,8 @@ export default {
     // eslint-disable-next-line require-await
     async login () {
       this.$router.push('/')
+      const provider = new this.$fb.auth.GoogleAuthProvider()
+      await this.$fb.auth().signInWithPopup(provider)
     }
   }
 }
