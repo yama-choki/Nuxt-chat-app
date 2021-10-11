@@ -1,8 +1,8 @@
 <template>
   <div>
-    <form>
+    <form v-if="form.name">
       <div class="form-group">
-        <label>ユーザ名</label>
+        <label>{{ form.name }}</label>
         <input v-model="form.name" type="text" class="form-control" readonly>
       </div>
       <div class="form-group">
@@ -21,7 +21,7 @@ export default {
   data () {
     return {
       form: {
-        name: 'some user',
+        name: null,
         message: ''
       }
     }
